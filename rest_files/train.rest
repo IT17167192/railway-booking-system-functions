@@ -1,0 +1,10 @@
+###Add new train with admin token admin userID , Train name must be unique
+POST http://localhost:8000/api/train/create/5ec098b8d123b30664740b38
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiOGQxMjNiMzA2NjQ3NDBiMzgiLCJpYXQiOjE1ODk2ODAzMjF9.Qx_yhrNpJ865CvTHX1cEsFKwqR2sHtNCbr-_iqY7vgo
+
+{
+  "trainName": "Train 3",
+  "route": "Route 1",
+  "capacity":1000
+}

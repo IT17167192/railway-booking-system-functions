@@ -1,0 +1,15 @@
+###Add new station with admin token admin userID , Station name and location must be unique
+POST http://localhost:8000/api/station/create/5ec098b8d123b30664740b38
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiOGQxMjNiMzA2NjQ3NDBiMzgiLCJpYXQiOjE1ODk2ODAzMjF9.Qx_yhrNpJ865CvTHX1cEsFKwqR2sHtNCbr-_iqY7vgo
+
+{
+  "stationName": "Station 2",
+  "locationName": "Location 2"
+}
+
+###get all stations
+GET http://localhost:8000/api/stations
+
+###get station by ID
+GET http://localhost:8000/api/station/5ec09fee3c44b73280b2cefa

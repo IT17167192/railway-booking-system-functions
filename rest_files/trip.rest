@@ -1,0 +1,21 @@
+###Add new trip with admin token admin userID
+POST http://localhost:8000/api/trip/create/5ec098b8d123b30664740b38
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiOGQxMjNiMzA2NjQ3NDBiMzgiLCJpYXQiOjE1ODk2ODAzMjF9.Qx_yhrNpJ865CvTHX1cEsFKwqR2sHtNCbr-_iqY7vgo
+
+{
+  "train": "5ec09a39b6387d20cc5b93ed",
+  "dayOfTheWeek": "Wednesday",
+  "stops": [
+    {
+      "station": "5ec09fee3c44b73280b2cefa",
+      "arrival": "02:48:57",
+      "departure": "02:52:00"
+    },
+    {
+      "station": "5ec0a0063c44b73280b2cefd",
+      "arrival": "04:30:57",
+      "departure": "04:35:00"
+    }
+  ]
+}

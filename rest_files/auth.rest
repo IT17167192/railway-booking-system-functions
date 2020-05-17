@@ -1,0 +1,37 @@
+POST http://localhost:8000/api/signup
+Content-Type: application/json
+
+{
+  "name": "Kumary",
+  "email": "kumaryniks@gmail.com",
+  "password": "kumary123"
+}
+
+###Admin creation process
+POST http://localhost:8000/api/signup
+Content-Type: application/json
+
+{
+  "name": "Yugma Fernando",
+  "email": "fyugma@gmail.com",
+  "password": "yugma123",
+  "role": 1
+}
+
+###correct credentials sign in - normal user
+POST http://localhost:8000/api/signin
+Content-Type: application/json
+
+{
+  "email": "kumaryniks@gmail.com",
+  "password": "kumary123"
+}
+
+###correct credentials sign in - admin user
+POST http://localhost:8000/api/signin
+Content-Type: application/json
+
+{
+  "email": "fyugma@gmail.com",
+  "password": "yugma123"
+}
