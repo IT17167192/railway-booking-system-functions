@@ -8,3 +8,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiO
   "route": "Route 1",
   "capacity":1000
 }
+
+###get all stations
+GET http://localhost:8000/api/trains
+
+###get station by ID
+GET http://localhost:8000/api/train/5ec09a39b6387d20cc5b93ed
