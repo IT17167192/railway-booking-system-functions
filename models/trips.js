@@ -12,17 +12,26 @@ const tripSchema = new mongoose.Schema({
         required: true
     },
     stops: [{
-        station: {
-            type: ObjectId,
-            ref: 'Station',
-            required: true
-        },
         arrival: {
             type: String,
             required: true
         },
+        fromStation: {
+            type: ObjectId,
+            ref: 'Station',
+            required: true
+        },
         departure: {
             type: String,
+            required: true
+        },
+        toStation: {
+            type: ObjectId,
+            ref: 'Station',
+            required: true
+        },
+        price: {
+            type: Number,
             required: true
         }
     }]

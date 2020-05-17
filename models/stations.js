@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const {ObjectId} = mongoose.Schema;
 
 const stationSchema = new mongoose.Schema({
     stationName: {
@@ -12,6 +13,11 @@ const stationSchema = new mongoose.Schema({
         trim: true,
         required: true,
         unique: true
+    },
+    relevantRoute: {
+        type: ObjectId,
+        ref: 'RouteModal',
+        required: true
     }
 }, {timestamps: true});
 

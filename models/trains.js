@@ -10,8 +10,8 @@ const trainSchema = new mongoose.Schema({
         unique: true
     },
     route: {
-        type: String,
-        trim: true,
+        type: ObjectId,
+        ref: 'RouteModal',
         required: true
     },
     capacity: {

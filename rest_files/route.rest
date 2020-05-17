@@ -1,0 +1,13 @@
+###Add new route with admin token admin userID , Train name must be unique
+POST http://localhost:8000/api/route/create/5ec098b8d123b30664740b38
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiOGQxMjNiMzA2NjQ3NDBiMzgiLCJpYXQiOjE1ODk2ODAzMjF9.Qx_yhrNpJ865CvTHX1cEsFKwqR2sHtNCbr-_iqY7vgo
+
+{
+  "routeName": "Route 2",
+  "startLocation": "Place C",
+  "endLocation": "Place D"
+}
+
+###get all routes
+GET http://localhost:8000/api/routes

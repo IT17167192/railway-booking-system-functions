@@ -17,7 +17,7 @@ exports.create = (req, res) => {
 
 //get train by id
 exports.getTrainById = (req, res, next, id) => {
-    Train.findById(id).exec((err, train) => {
+    Train.findById(id).populate('route').exec((err, train) => {
        if(err || !train){
            return res.status(400).json({
                error: "Not a Train!"
@@ -30,7 +30,7 @@ exports.getTrainById = (req, res, next, id) => {
 
 //get all trains
 exports.getAllTrains = (req, res) => {
-  Train.find().exec((err, data) => {
+  Train.find().populate('route').exec((err, data) => {
       if(err){
           return res.status(400).json({
               error: errorHandler(err)

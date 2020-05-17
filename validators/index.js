@@ -76,6 +76,28 @@ exports.stationValidator = (req, res, next) => {
     next();
 };
 
+exports.routeValidator = (req, res, next) => {
+    req.check('startLocation', 'Start Location name must be added!').notEmpty()
+        .isLength({
+            min: 1,
+        })
+        .withMessage('Start Location name cannot be empty');
+
+    req.check('endLocation', 'End Location name must be added!').notEmpty()
+        .isLength({
+            min: 1,
+        })
+        .withMessage('End location cannot be empty');
+
+    const catErr = req.validationErrors();
+
+    if (catErr) {
+        const catNameError = catErr.map(catErr => catErr.msg)[0];
+        return res.status(400).json({error: catNameError});
+    }
+    next();
+};
+
 exports.tripValidator = (req, res, next) => {
     req.check('train', 'Train name must be added!').notEmpty()
         .isLength({

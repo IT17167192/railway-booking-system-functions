@@ -17,7 +17,7 @@ exports.create = (req, res) => {
 
 // Get Station by ID
 exports.getStationById = (req, res, next, id)  => {
-    Station.findById(id).exec((err, stat) => {
+    Station.findById(id).populate("relevantRoute").exec((err, stat) => {
         if(err || !stat){
             return res.status(400).json({
                 error: "Not a Station!"
@@ -31,7 +31,7 @@ exports.getStationById = (req, res, next, id)  => {
 
 //Get all stations
 exports.getAllStations = (req, res) => {
-    Station.find().exec((err, data) => {
+    Station.find().populate("relevantRoute").exec((err, data) => {
         if(err){
             return res.status(400).json({
                 error:errorHandler(err)

@@ -4,12 +4,13 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiOGQxMjNiMzA2NjQ3NDBiMzgiLCJpYXQiOjE1ODk2ODAzMjF9.Qx_yhrNpJ865CvTHX1cEsFKwqR2sHtNCbr-_iqY7vgo
 
 {
-  "stationName": "Station 2",
-  "locationName": "Location 2"
+  "stationName": "Station 4",
+  "locationName": "Location 4",
+  "relevantRoute": "5ec0d2ee22e14334e815fc8e"
 }
 
 ###get all stations
 GET http://localhost:8000/api/stations
 
 ###get station by ID
-GET http://localhost:8000/api/station/5ec09fee3c44b73280b2cefa
+GET http://localhost:8000/api/station/5ec0d4f29cb2f03e240cd490

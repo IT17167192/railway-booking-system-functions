@@ -4,13 +4,13 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiOGQxMjNiMzA2NjQ3NDBiMzgiLCJpYXQiOjE1ODk2ODAzMjF9.Qx_yhrNpJ865CvTHX1cEsFKwqR2sHtNCbr-_iqY7vgo
 
 {
-  "trainName": "Train 3",
-  "route": "Route 1",
+  "trainName": "Train 4",
+  "route": "5ec0d2ee22e14334e815fc8e",
   "capacity":1000
 }
 
-###get all stations
+###get all trains
 GET http://localhost:8000/api/trains
 
-###get station by ID
-GET http://localhost:8000/api/train/5ec09a39b6387d20cc5b93ed
+###get train by ID
+GET http://localhost:8000/api/train/5ec0d3e122e14334e815fc93
