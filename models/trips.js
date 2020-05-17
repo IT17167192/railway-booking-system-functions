@@ -30,7 +30,11 @@ const tripSchema = new mongoose.Schema({
             ref: 'Station',
             required: true
         },
-        price: {
+        pricePerAdult: {
+            type: Number,
+            required: true
+        },
+        pricePerChild: {
             type: Number,
             required: true
         }

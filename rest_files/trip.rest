@@ -12,14 +12,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiO
       "arrival": "08:30:00",
       "toStation": "5ec0d4ca9cb2f03e240cd48e",
       "departure": "09:20:00",
-      "price": 25
+      "pricePerAdult": 25,
+      "pricePerChild": 18
     },
     {
       "fromStation": "5ec0d4ca9cb2f03e240cd48e",
       "arrival": "09:20:00",
       "toStation": "5ec0d4dd9cb2f03e240cd48f",
       "departure": "10:10:00",
-      "price": 18
+      "pricePerAdult": 18,
+      "pricePerChild": 10
     }
   ]
 }

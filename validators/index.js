@@ -76,6 +76,34 @@ exports.stationValidator = (req, res, next) => {
     next();
 };
 
+exports.bookingValidator = (req, res, next) => {
+    req.check('user', 'User must be added!').notEmpty()
+        .isLength({
+            min: 1,
+        })
+        .withMessage('User cannot be empty');
+
+    req.check('fromStation', 'From station must be added!').notEmpty()
+        .isLength({
+            min: 1,
+        })
+        .withMessage('From cannot be empty');
+
+    req.check('toStation', 'To station must be added!').notEmpty()
+        .isLength({
+            min: 1,
+        })
+        .withMessage('To cannot be empty');
+
+    const catErr = req.validationErrors();
+
+    if (catErr) {
+        const catNameError = catErr.map(catErr => catErr.msg)[0];
+        return res.status(400).json({error: catNameError});
+    }
+    next();
+};
+
 exports.routeValidator = (req, res, next) => {
     req.check('startLocation', 'Start Location name must be added!').notEmpty()
         .isLength({

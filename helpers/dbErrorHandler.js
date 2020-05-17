@@ -15,6 +15,8 @@ const uniqueMessage = error => {
             output = 'Train name must be unique!';
         }else if(errorIs === 'stationName' || errorIs === 'locationName'){
             output = 'Station name and location must be unique!';
+        }else{
+            output = "Unique field already exists";
         }
 
     } catch (ex) {

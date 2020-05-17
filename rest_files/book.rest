@@ -1,0 +1,20 @@
+###Add new booking userID
+POST http://localhost:8000/api/booking/create/5ec098b8d123b30664740b38
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWMwOThiOGQxMjNiMzA2NjQ3NDBiMzgiLCJpYXQiOjE1ODk2ODAzMjF9.Qx_yhrNpJ865CvTHX1cEsFKwqR2sHtNCbr-_iqY7vgo
+
+{
+  "user": "5ec098b8d123b30664740b38",
+  "fromStation": "5ec0d494165aeb3ca4ab5e02",
+  "toStation": "5ec0d4ca9cb2f03e240cd48e",
+  "noOfAdultPassengers" : 2,
+  "noOfChildPassengers" : 0,
+  "pricePerAdultPassenger" : 25,
+  "pricePerChildPassenger" : 18
+}
+
+###get all bookings
+GET http://localhost:8000/api/bookings
+
+###get all bookings
+GET http://localhost:8000/api/bookings/5ec098b8d123b30664740b38

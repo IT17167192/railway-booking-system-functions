@@ -12,6 +12,7 @@ const trainRoutes = require('./routes/train');
 const stationRoutes = require('./routes/station.js');
 const tripRoutes = require('./routes/trip.js');
 const routesRoute = require('./routes/routesRoute.js')
+const bookingRoute = require('./routes/booking.js')
 
 
 const app = express();
@@ -27,6 +28,7 @@ app.use('/api', trainRoutes);
 app.use('/api', stationRoutes);
 app.use('/api', tripRoutes);
 app.use('/api', routesRoute);
+app.use('/api', bookingRoute);
 
 const port = process.env.PORT || 8000;
 
